@@ -131,6 +131,51 @@ export default function MDXContent({
 MDXContent.isMDXComponent = true;"
 `;
 
+exports[`fusuma-loader should convert  1`] = `
+"/* @jsx mdx */
+
+
+        import React from 'react';
+        import { mdx } from '@mdx-js/react';
+        export const slides = [
+          (props) => (
+            <>
+              
+    <h1>{\`img src\`}</h1>
+    <p><img parentName=\\"p\\" {...{
+        \\"src\\": \\"../../image.png\\",
+        \\"alt\\": null
+      }}></img></p>
+    
+            </>
+          )];
+        export const fusumaProps = [{}];
+const makeShortcode = name => function MDXDefaultShortcode(props) {
+  console.warn(\\"Component \\" + name + \\" was not imported, exported, or provided by MDXProvider as global scope\\")
+  return <div {...props}/>
+};
+
+const layoutProps = {
+  slides
+};
+const MDXLayout = \\"wrapper\\"
+export default function MDXContent({
+  components,
+  ...props
+}) {
+  return <MDXLayout {...layoutProps} {...props} components={components} mdxType=\\"MDXLayout\\">
+    <h1>{\`img src\`}</h1>
+    <p><img parentName=\\"p\\" {...{
+        \\"src\\": \\"../../image.png\\",
+        \\"alt\\": null
+      }}></img></p>
+
+    </MDXLayout>;
+}
+
+MDXContent.isMDXComponent = true;"
+`;
+
 exports[`fusuma-loader should convert MathJax 1`] = `
 "/* @jsx mdx */
 
@@ -506,6 +551,51 @@ export default function MDXContent({
   <img src={require(\\"random2.png\\")} alt=\\"random2\\" />
   <img src={require(\\"random3.svg\\")} alt=\\"random3\\" />
     </div>
+
+    </MDXLayout>;
+}
+
+MDXContent.isMDXComponent = true;"
+`;
+
+exports[`fusuma-loader should convert all img src 2`] = `
+"/* @jsx mdx */
+
+
+        import React from 'react';
+        import { mdx } from '@mdx-js/react';
+        export const slides = [
+          (props) => (
+            <>
+              
+    <h1>{\`img src\`}</h1>
+    <p><img parentName=\\"p\\" {...{
+        \\"src\\": \\"../../image.png\\",
+        \\"alt\\": null
+      }}></img></p>
+    
+            </>
+          )];
+        export const fusumaProps = [{}];
+const makeShortcode = name => function MDXDefaultShortcode(props) {
+  console.warn(\\"Component \\" + name + \\" was not imported, exported, or provided by MDXProvider as global scope\\")
+  return <div {...props}/>
+};
+
+const layoutProps = {
+  slides
+};
+const MDXLayout = \\"wrapper\\"
+export default function MDXContent({
+  components,
+  ...props
+}) {
+  return <MDXLayout {...layoutProps} {...props} components={components} mdxType=\\"MDXLayout\\">
+    <h1>{\`img src\`}</h1>
+    <p><img parentName=\\"p\\" {...{
+        \\"src\\": \\"../../image.png\\",
+        \\"alt\\": null
+      }}></img></p>
 
     </MDXLayout>;
 }

@@ -18,3 +18,6 @@ It's very difficult to implement ESM so as not to break the existing code.
 -->
 
 # Introducing Fusuma 😎
+
+![](../../../site/website/static/img/logo-black.svg)
+![](../../../site/website/static/img/top-cli.png)
